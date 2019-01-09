@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+<report_name value="###无参转录组分析报告" />
+<report_abstract value="" />
+<h1 name="项目分析概况" type="一级标题显示样式" desc="一级标题描述" />
+<p type="正文段落显示样式" desc="1)完成个转录组测序，共获得10Gb Clean data,平均每个样本10Gb。" />
+<p type="正文段落显示样式" desc="2)组装共获得10000条Unigene序列，通过与NR、Swiss-Prot、Kegg、Cog/Kog、GO以及Pfam数据库的比对注释，共获得5000条Unigene的注释结果。" />
+<p type="正文段落显示样式" desc="3)基于Unigene的结构分析主要包括：CDS预测、SNP及SSR分析。" />
+<p type="正文段落显示样式" desc="4)分析各个样本的Unigene表达量，并识别不同处理间的差异表达基因。" />
+<p type="正文段落显示样式" desc="5)对差异表达基因进行模式聚类、富集性分析。" />
+<h1 name="数据分析流程图" type="一级标题显示样式" desc="一级标题描述" />
+<pic name="数据分析流程图" type="img-width-max" desc="数据分析流程图" path="&quot;&quot;" />
+<h1 name="测序数据统计" type="一级标题显示样式" desc="一级标题描述" />
+<p type="正文段落显示样式" desc="对高通量测序原声下机数据（Raw data）进行质量过滤，去除接头序列以及低质量的Reads获得高质量的Clean data。Clean data数据统计分析结果如下：" />
+<table name="样品测序数据评估统计表" type="type1|full" desc="注：&#10;Samples：样品信息单样品名称；&#10;Read Number：Clean Data中pair-end Reads总数；&#10;Base Number：Clean Data总碱基数；&#10;GC Content：Clean Data GC含量，即Clean Data中G和C两种碱基占总碱基的百分比；&#10;%≥Q30：Clean Data质量值大于或等于30的碱基所占的百分比。" path="样品测序数据评估统计表" /><h1 name="组装结果统计" type="一级标题显示样式" desc="一级标题描述" />
+<p type="正文段落显示样式" desc="基于Clean Data使用trinity软件进行组装，组装共得到10000条Unigene，Unigene的N50为1000，组装完整性较高。组装结果及统计结果如下：" />
+<file name="1)组装结果序列：unigene.fasta" type="文件显示样式" desc="fasta格式的组装结果" path="&quot;&quot;" action="文件类型" />
+<pic name="Unigene长度分布图" type="img-width-max" desc="Unigene长度分布图" path="&quot;&quot;" />
+<h1 name="Unigene功能注释" type="一级标题显示样式" desc="一级标题描述" />
+<h1 name="Unigene结构分析" type="一级标题显示样式" desc="一级标题描述" />
+<h2 name="简单重复序列SSR分析" type="二级标题显示样式" desc="二级标题描述" />
+<h2 name="SNP分析" type="二级标题显示样式" desc="二级标题描述" />
+<h2 name="编码序列分析" type="二级标题显示样式" desc="二级标题描述" />
+<h1 name="基因表达量分析" type="一级标题显示样式" desc="一级标题描述" />
+<p type="正文段落显示样式" desc="将各样品的Clean Data与组装得到的Transcript或Unigene进行序列比对。比对到Transcript或Unigene的Reads称为Mapped Reads，Mapped Reads将用于后续的比对定量分析，分析结果如下：" />
+<file name="原始定量结果：matrix.txt" type="文件显示样式" desc="其中每行代表一个Unigene或Transcript，每一列代表一个样本对应的Unigene或Transcript的Mapped Reads数目" path="&quot;&quot;" action="文件类型" />
+<h1 name="差异表达分析" type="一级标题显示样式" desc="一级标题描述" />
+<p type="正文段落显示样式" desc="在不同处理情况下（如对照与处理、野生型和突变型、不同时间点、不同组织等），表达水平存在显著差异的基因，称之为差异表达基因（Differentially Expressed Gene，DEG）。差异表达基因的筛选条件为：将FDR小于0.001且差异倍数FC（Fold Change）大于等于2。" />
+<p type="正文段落显示样式" desc="差异表达基因数目统计表如下:" />
+<table name="差异表达基因数目统计表" type="type1|full" desc="注：&#10;DEG Set：差异表达基因集名称；&#10;All DEG：差异表达基因数目；&#10;up-regulated：上调基因的数目；&#10;down-regulated：下调基因的数目。" path="&quot;&quot;" /><p type="正文段落显示样式" desc="火山图（Volcano Plot）可以直观地展现所有基因的FDR与Fold Change之间的关系，以便快速查看基因在两组样品间的表达水平差异程度及其统计学显著性。样品间差异表达火山图见下图:" />
+<p type="正文段落显示样式" desc="通过MA图可以直观地查看两组样品中基因的表达丰度和差异倍数的整体分布。基因的差异表达MA图见下图:" />
+<h1 name="差异基因功能富集性分析" type="一级标题显示样式" desc="一级标题描述" />
+<h1 name="参考文献" type="一级标题显示样式" desc="一级标题描述" />
+</report>
